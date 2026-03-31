@@ -9,7 +9,6 @@ description = "Tools to parse and convert OptoDAS data"
 dependencies = [
     "numpy",
     "pandas",
-    "simpledas",
     "julian",
     "rich",
     "sympy",
