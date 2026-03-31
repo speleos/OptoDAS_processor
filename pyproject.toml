@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "DAS_processor"
-version = "0.1.0"
+version = "0.1.1"
 description = "Tools to parse and convert OptoDAS data"
 dependencies = [
     "numpy",
@@ -15,7 +15,9 @@ dependencies = [
     "h5py",
     "obspy",
     "matplotlib",
-    "scipy",]
+    "scipy",
+    "mpl_toolkits",
+    ]
 
 [tool.setuptools.packages.find]
 where = ["."]
