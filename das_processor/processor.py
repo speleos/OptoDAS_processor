@@ -47,10 +47,9 @@ from matplotlib.colors import Normalize
 from matplotlib.patches import ConnectionPatch,Rectangle
 from matplotlib.transforms import (Bbox, TransformedBbox,
                                    blended_transform_factory)
-from mpl_toolkits.basemap import Basemap
-from mpl_toolkits.axes_grid1.inset_locator import (BboxConnector,
-                                                   BboxConnectorPatch,
-                                                   BboxPatch)
+#from mpl_toolkits.basemap import Basemap
+#from mpl_toolkits.axes_grid1.inset_locator import (BboxConnector,BboxConnectorPatch,BboxPatch)
+
 import scipy.signal as sps
 from scipy import ndimage
 from scipy import signal
