@@ -76,7 +76,7 @@ else:
     from tqdm import tqdm
 
 from shared_config import channel_ranges
-from ECHO_EQ import sources
+from sources_list import sources
 
 # define class for storing results
 
