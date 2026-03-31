@@ -34,7 +34,6 @@ from obspy.geodetics import degrees2kilometers,locations2degrees
 from obspy.core.inventory import Inventory, Network, Station, Channel, Site, Comment, Response, Equipment, Operator
 from obspy.core.inventory import InstrumentSensitivity, Person, ResponseStage, PolesZerosResponseStage, CoefficientsTypeResponseStage
 from obspy.core.inventory import read_inventory
-#from obspy.signal.invsim import corn_freq_2_paz
 
 from matplotlib import mlab
 
@@ -76,7 +75,7 @@ else:
     from tqdm import tqdm
 
 from shared_config import channel_ranges
-from sources_list import sources
+from sources_list import sources, channel_ranges
 
 # define class for storing results
 
@@ -595,7 +594,7 @@ class DASProcessor:
     def dfdas_to_csv(self, params=None):
         """
         Saves the decimated self.dfdas directly to CSV.
-        Uses 'csv_path' and appends the timelapse suffix.
+        Uses 'csv_out_path' and appends the timelapse suffix.
         """
         if self.dfdas is None:
             print("No data to save.")
@@ -981,8 +980,8 @@ def get_coordinates(channel, global_params,roi_channel=False):
 
     Parameters:
     - channel (int): The channel number for which coordinates are needed.
-    - csv_path (str): The path to the CSV file.
-    - csv_DAS (str): The name of the CSV file.
+    - coords_path (str): The path to the CSV file.
+    - coords_DAS (str): The name of the CSV file.
 
     Returns:
     Tuple (float, float, float): A tuple containing latitude, longitude, and elevation.
@@ -990,9 +989,9 @@ def get_coordinates(channel, global_params,roi_channel=False):
     ep, pp = global_params['exec_params'], global_params['path_params']
     
     if ep.get("verbose", False) == 2:
-        print(f"Getting coordinates for channel {channel} from {pp['csv_path']}{pp['csv_DAS']}")
+        print(f"Getting coordinates for channel {channel} from {pp['coords_path']}{pp['coords_DAS']}")
         
-    df = pd.read_csv(os.path.join(pp['csv_path'],pp['csv_DAS']))
+    df = pd.read_csv(os.path.join(pp['coords_path'],pp['coords_DAS']))
 
     if roi_channel:
         filtered_df = df.loc[df['ROI_CHANNEL'] == channel]
@@ -1315,8 +1314,8 @@ def get_azimuth_dip(channel, global_params,roi_channel=False):
 
     Parameters:
     - channel (int): The channel number for which coordinates are needed.
-    - csv_path (str): The path to the CSV file.
-    - csv_DAS (str): The name of the CSV file.
+    - coords_path (str): The path to the CSV file.
+    - coords_DAS (str): The name of the CSV file.
 
     Returns:
     Tuple (float, float): A tuple containing azimuth and dip.
@@ -1324,9 +1323,9 @@ def get_azimuth_dip(channel, global_params,roi_channel=False):
     ep, pp = global_params['exec_params'], global_params['path_params']
 
     if ep.get("verbose", False) == 2:
-        print(f"Getting azimuth and dip for channel {channel} from {pp['csv_path']}{pp['csv_DAS']}")
+        print(f"Getting azimuth and dip for channel {channel} from {pp['coords_path']}{pp['coords_DAS']}")
         
-    df = pd.read_csv(os.path.join(pp['csv_path'],pp['csv_DAS']))
+    df = pd.read_csv(os.path.join(pp['coords_path'],pp['coords_DAS']))
 
     if roi_channel:
         filtered_df = df.loc[df['ROI_CHANNEL'] == channel]
