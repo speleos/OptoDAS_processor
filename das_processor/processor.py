@@ -10,7 +10,6 @@ from simpledas import h5pydict
 from sympy import symbols, sympify
 import re
 import simpledas
-import xdas as xd
 import builtins
 import string
 import math
