@@ -70,13 +70,9 @@ if hasattr(builtins, "__IPYTHON__"):
 else:
     from tqdm import tqdm
 
-from shared_config import channel_ranges
-from sources_list import sources, channel_ranges
-
-# define class for storing results
-
+# define class
 class DASProcessor:
-    def __init__(self, global_params):
+    def __init__(self, global_params,sources=None, channel_ranges=None, config=None):
         self.exec_params = global_params.get('exec_params', {})
         self.path_params = global_params.get('path_params', {})
         self.sources = global_params.get('sources', {})
