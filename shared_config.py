@@ -1,3 +1,22 @@
+path_params={
+    "coords_path": './05_Coords/',
+    "coords_DAS": 'coords.csv',
+    "coords_DAS_lowres": 'ELLALink_public_coords.csv',
+    
+    "MSEED_path": './02_miniSEED/DAS/',
+    "csv_out_path": './03_CSV/',
+
+    "DAS_data_path": './01_RAW_DATA/',
+    "experiment_path": './01_RAW_DATA/',
+
+    "events_path": './02_Events/',
+    
+    "mseed_land_stations": './02_miniSEED/Stations/all-stations.mseed',
+    "hdf5_headers_example": '/mnt/D2A/DAS/OptoDAS_SN44/26OCT-02NOV/20231027/dphi/125959.hdf5',
+    "JSON_template": '/mnt/D2A/DAS/DAS-RCN_example.json',
+    "figures_path": './04_Figures/'
+}
+
 channel_ranges={
     "seismic": {"channel_min": [450] ,
                 "channel_max": [11293] ,    #[11293] ,
@@ -127,25 +146,6 @@ spec_freq_params={
                     "fmax": 40,
                    },
             }
-
-path_params={
-    "csv_path": '/mnt/D2A/DAS/ELLALink/',
-    "csv_out_path": '/mnt/SUBMERSE/ECHO/CSV/',
-    "csv_DAS": 'coords.csv',
-    "csv_DAS_lowres": 'ELLALink_public_coords.csv',
-    "MSEED_path": '/mnt/D2A/DAS/MSEED/tmp',
-
-    "DAS_data_path": '/mnt/INESCTEC/',
-    
-    "experiment_path": '/mnt/INESCTEC/',
-
-    "events_path": '/mnt/SUBMERSE/Events/ECHO/',
-    
-    "mseed_land_stations": '/mnt/D2A/DAS/CEIDA/27OCT2023_all-stations.mseed',
-    "hdf5_headers_example": '/mnt/D2A/DAS/OptoDAS_SN44/26OCT-02NOV/20231027/dphi/125959.hdf5',
-    "JSON_template": '/mnt/D2A/DAS/DAS-RCN_example.json',
-    "figures_path": '/mnt/D2A/DAS/figures/'
-}
 
 station_coordinates = {
     "PMAR": {"latitude": 32.72, "longitude": -16.91, "channels": "HH*"},
