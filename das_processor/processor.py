@@ -61,8 +61,6 @@ from concurrent.futures import ProcessPoolExecutor,ThreadPoolExecutor
 import subprocess
 from multiprocessing import Process
 
-from memory_profiler import profile
-
 #check if code is running in jupyter
 if hasattr(builtins, "__IPYTHON__"):
     from tqdm.notebook import tqdm
