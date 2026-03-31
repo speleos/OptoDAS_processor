@@ -16,7 +16,6 @@ dependencies = [
     "obspy",
     "matplotlib",
     "scipy",
-    "mpl_toolkits",
     ]
 
 [tool.setuptools.packages.find]
