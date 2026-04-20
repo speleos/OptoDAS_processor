@@ -12,8 +12,6 @@ path_params={
     "events_path": './02_Events/',
     
     "mseed_land_stations": './02_miniSEED/Stations/all-stations.mseed',
-    "hdf5_headers_example": '/mnt/D2A/DAS/OptoDAS_SN44/26OCT-02NOV/20231027/dphi/125959.hdf5',
-    "JSON_template": '/mnt/D2A/DAS/DAS-RCN_example.json',
     "figures_path": './04_Figures/'
 }
 
@@ -116,9 +114,9 @@ trace_header={
         "channel":'HSF',
         "net_description": "GeoLAB DAS cable. 57 km-long dark fibre starting at the Praia Formosa CLS, managed by ARDITI.",
         "net_starttime": [2023,10,26],
-        "net_no_stations": 11293, # load this value later
+        "net_no_stations": 11293, # update this value later
         "sta_name_prefix": "GeoLAB fibre. DAS",
-        "inventory_source": "maloureiro@fc.ul.pt",
+        "inventory_source": "maloureiro@ciencias.ulisboa.pt",
         "station_prefix": "G", #"GLB", # the number of letters in the station name prefix will change the precision of the number code.
 }
 
