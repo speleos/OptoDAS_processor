@@ -401,7 +401,7 @@ class DASProcessor:
         """
         ap = self.acquisition_params
         event_info = sources.get(event, {})
-        event_type = event_info.get("channel_ranges")
+        event_type = event_info.get("type")
 
         print(f'Processing event {event}, of the type {event_type}')
         print('Calculating trim times and figure sizes...')
