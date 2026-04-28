@@ -1,7 +1,8 @@
-# File to load (uncomment or type in the name of the one interested in):
-file = "pos_test_100.0Hz.mseed"
-# file = "neg_test_100.0Hz.mseed"
+# File to load
+file = "pos_test_100.0Hz.mseed" # Or use a previously loaded Stream from DAS_processor. In that case, comment out this line
 
+if file is not None:
+  st = read(file)  
 
 # Settings for the envelope plots:
 vmin=.7
@@ -149,7 +150,7 @@ def fkfilt(data,nnx,nns,dx,dt,min_channel,max_channel,vmin=1400,vmax=1600,xint=1
 
     return data_filt
 
-st = read(file)
+
 print(file+" shape: "+str(np.shape(st)))
 print(st[0].stats)
 
