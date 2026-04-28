@@ -92,11 +92,11 @@ sources = {
 
 The example script shows how to run two separate processing chains. The first will download example data from GEOFON. The second will automatically convert the data into MSEED in hourly files.
 
-## Baleen whale detector
-There is also a baleen whale detector based on template matching that can be run separately after data has been loaded and converted to Stream() using the dfdas_to_mseed function (even with write set to False).
-
 ## Dispersion curves fit
 The dispersion curves example needs a single 30-minute hdf5 file, downsampled to 1 Hz. The file can be assembled from the individual 10-seconds files and decimated using DAS_processor.
+
+## Baleen whale detector
+There is also a baleen whale detector based on template matching that can be run separately after data has been loaded and converted to Stream() using the dfdas_to_mseed function (even with write set to False).
 
 ## Whale locator
 The script needs a 60-seconds Stream() of the entire cable, decimated to 100 Hz. The script can read a miniSEED file, or use DAS_processor to load raw DAS data, decimate it, and converted it to Stream().
