@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import os
 import time
-from whale_locator_functions import fkspec, rmean, fkmisfit
+from dispersion_curve_functions import fkspec, rmean, fkmisfit
 
 # Data from external server - please change these details to work with your data.
 days = [20240630,20240701,20240702]
