@@ -9,13 +9,13 @@ from whale_locator_functions import fkspec, rmean, fkmisfit
 
 # Data from external server - please change these details to work with your data.
 days = [20240630,20240701,20240702]
-savefig = "/home/idl/SUBMERSE/FIGURES/Fit_fk/"
-whatpath="to_define"
+savefig = "./FIGURES/Fit_fk/"
+whatpath="./" # "defined" / "to_define" - tells the program how paths are constructed
 
 # # Test Data stored on this machine for fast processing (just uncomment this part and change the loop further down to "test mode")
 # days = "indiv"
 # whatpath = "defined"
-# fpath = "/home/idl/SUBMERSE/DATA/GeoLAB/Testfolder/"
+# fpath = "./DATA/GeoLAB/Testfolder/"
 # theinterval = "225959"
 # thefile = str(theinterval) + ".hdf5"
 # savefig = fpath+"SAVEFIG/"+theinterval+"/"
@@ -39,7 +39,7 @@ chint = 1
 for theday in days:
     if whatpath=="to_define":
         # Change this path accordingly.
-        fpath = "/mnt/SUBMERSE/DATA_dphi/"+str(theday)+"/processed/1Hz_30min/"
+        fpath = "./DATA_dphi/"+str(theday)+"/processed/1Hz_30min/"
         arr = np.sort(os.listdir(fpath))
     else:
         fpath=whatpath
