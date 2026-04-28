@@ -92,4 +92,8 @@ sources = {
 
 The example script shows how to run two separate processing chains. The first will download example data from GEOFON. The second will automatically convert the data into MSEED in hourly files.
 
+## Baleen whale detector
 There is also a baleen whale detector based on template matching that can be run separately after data has been loaded and converted to Stream() using the dfdas_to_mseed function (even with write set to False).
+
+## Dispersion curves fit
+The dispersion curves example needs a single 30-minute hdf5 file, that can be assembled from the individual 10-seconds files using DAS_processor.
