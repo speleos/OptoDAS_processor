@@ -1,4 +1,4 @@
-# OptoDAS_processor
+# DAS_processor
 Tools to automate the processing of OptoDAS datasets
 
 
@@ -101,7 +101,7 @@ There is also a baleen whale detector based on template matching that can be run
 ## Whale locator
 The script needs a 60-seconds Stream() of the entire cable, decimated to 100 Hz. The script can read a miniSEED file, or use DAS_processor to load raw DAS data, decimate it, and converted it to Stream().
 
-
-# Acknowledgements
+---
+## Funding
 This development was supported by the European Commission under the Horizon Europe programme, through the project SUBMERSE (https://submerse.eu/) (Grant Agreement No. 101095055), funded within the HORIZON-INFRA-2022-TECH-01 call.
 Additional support from the ECHO project (DOI: 10.54499/2024.13655.PEX), and FCT, I.P./MCTES through national funds (PIDDAC) (LA/P/0068/2020 - DOI: 10.54499/LA/P/0068/2020, UID/50019/2025 - DOI: 10.54499/UID/50019/2025, UID/PRR/50019/2025 - DOI: 10.54499/UID/PRR/50019/2025,  UID/PRR2/50019/2025 - DOI: 10.54499/UID/PRR2/50019/2025).
