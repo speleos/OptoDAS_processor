@@ -145,7 +145,7 @@ def fkmisfit(data,fs,dx,z_up,z_down,current,incidence,kk,\
     # Create a mask of zeros in the same shape.
     filt = np.zeros(ft2s.shape)
 
-    # I have to say, I don't know, why this value has to be ~0.4...need to look into that.
+    # Tests have shown that this number works best
     limitval = 0.4
 
     # Create a mask to "mute" entries by replacing zeros with ones where C is in the desired range.
